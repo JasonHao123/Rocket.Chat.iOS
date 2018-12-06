@@ -47,8 +47,13 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
 
+    @IBOutlet weak var imageViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewRightSpacingTabletConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewRightSpacingPhoneConstraint: NSLayoutConstraint!
+
     override func awakeFromNib() {
         super.awakeFromNib()
+
         insertGesturesIfNeeded(with: username)
     }
 
