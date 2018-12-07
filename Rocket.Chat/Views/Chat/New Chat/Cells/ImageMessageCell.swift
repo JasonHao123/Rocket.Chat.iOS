@@ -53,7 +53,6 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
         insertGesturesIfNeeded(with: username)
     }
 
