@@ -41,7 +41,9 @@ extension Message: UnmanagedConvertible {
 
 struct UnmanagedMessage: UnmanagedObject, Equatable {
     typealias Object = Message
+
     var identifier: String
+    var rid: String
     var text: String
     var type: MessageType
     var attachments: [UnmanagedAttachment]
@@ -75,8 +77,10 @@ extension UnmanagedMessage {
     static func == (lhs: UnmanagedMessage, rhs: UnmanagedMessage) -> Bool {
         return
             lhs.identifier == rhs.identifier &&
+            lhs.type == rhs.type &&
             lhs.temporary == rhs.temporary &&
             lhs.failed == rhs.failed &&
+            lhs.markedForDeletion == rhs.markedForDeletion &&
             lhs.mentions == rhs.mentions &&
             lhs.channels == rhs.channels &&
             lhs.attachments.elementsEqual(rhs.attachments) &&
@@ -100,6 +104,7 @@ extension UnmanagedMessage {
         }
 
         identifier = messageIdentifier
+        rid = message.rid
         text = message.text
         type = message.type
         userIdentifier = message.userIdentifier
