@@ -120,7 +120,7 @@ final class TextAttachmentCell: BaseTextAttachmentMessageCell, SizingCell {
     func configureExpandedState(with viewModel: TextAttachmentChatItem) {
         arrow.image = theme == .light ? #imageLiteral(resourceName: "Attachment Expanded Light") : #imageLiteral(resourceName: "Attachment Expanded Dark")
 
-        if let subtitleText = viewModel.subtitle {
+        if let subtitleText = viewModel.text {
             emptySubtitleHeightConstraint.isActive = false
             subtitleHeightConstraint.isActive = true
             subtitleTopConstraint.constant = subtitleTopInitialConstant

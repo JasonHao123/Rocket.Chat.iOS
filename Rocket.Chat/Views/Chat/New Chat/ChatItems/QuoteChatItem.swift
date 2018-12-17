@@ -16,28 +16,27 @@ final class QuoteChatItem: BaseTextAttachmentChatItem, ChatItem, Differentiable 
         return hasText ? QuoteCell.identifier : QuoteMessageCell.identifier
     }
 
-    let identifier: String
     let purpose: String
-    let title: String
-    let text: String?
     let hasText: Bool
 
-    init(identifier: String,
-         purpose: String,
-         title: String,
-         text: String?,
-         collapsed: Bool,
-         hasText: Bool,
-         user: UnmanagedUser?,
-         message: UnmanagedMessage?) {
+    init(
+        identifier: String,
+        purpose: String,
+        title: String,
+        text: String?,
+        collapsed: Bool,
+        hasText: Bool,
+        user: UnmanagedUser?,
+        message: UnmanagedMessage?
+    ) {
 
-        self.identifier = identifier
         self.purpose = purpose
-        self.title = title
-        self.text = text
         self.hasText = hasText
 
         super.init(
+            identifier: identifier,
+            title: title,
+            text: text,
             collapsed: collapsed,
             user: user,
             message: message

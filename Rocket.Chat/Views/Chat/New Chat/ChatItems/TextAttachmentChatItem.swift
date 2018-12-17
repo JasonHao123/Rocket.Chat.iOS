@@ -16,9 +16,6 @@ final class TextAttachmentChatItem: BaseTextAttachmentChatItem, ChatItem, Differ
         return hasText ? TextAttachmentCell.identifier : TextAttachmentMessageCell.identifier
     }
 
-    let identifier: String
-    let title: String
-    let subtitle: String?
     let fields: [UnmanagedField]
     let color: String?
     let hasText: Bool
@@ -27,22 +24,22 @@ final class TextAttachmentChatItem: BaseTextAttachmentChatItem, ChatItem, Differ
         identifier: String,
         fields: [UnmanagedField],
         title: String,
-        subtitle: String?,
+        text: String?,
         color: String?,
         collapsed: Bool,
         hasText: Bool,
         user: UnmanagedUser?,
         message: UnmanagedMessage?
-        ) {
+    ) {
 
-        self.identifier = identifier
-        self.title = title
-        self.subtitle = subtitle
         self.color = color
         self.fields = fields
         self.hasText = hasText
 
         super.init(
+            identifier: identifier,
+            title: title,
+            text: text,
             collapsed: collapsed,
             user: user,
             message: message

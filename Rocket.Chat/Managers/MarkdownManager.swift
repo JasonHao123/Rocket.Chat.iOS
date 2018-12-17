@@ -50,6 +50,10 @@ class MarkdownManager {
         return defaultParser.attributedStringFromAttributedMarkdownString(attributedString)
     }
 
+    func normalizeString(_ string: String) -> String {
+        return defaultParser.attributedStringFromMarkdown(string)?.string ?? ""
+    }
+
     func transformAttributedString(_ attributedString: NSAttributedString, with theme: Theme?) -> NSAttributedString {
         guard let theme = theme else { return defaultParser.attributedStringFromAttributedMarkdownString(attributedString) }
 
