@@ -24,6 +24,7 @@ def shared_pods
   # Crash Report
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'CYLTabBarController', '~> 1.17.6'
 
   # Code utilities
   pod 'semver'

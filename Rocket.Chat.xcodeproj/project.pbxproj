@@ -28,6 +28,17 @@
 		140A95E4202F536D003FD564 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A95E3202F536D003FD564 /* DrawingViewController.swift */; };
 		140A95E6202F7074003FD564 /* DrawingControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A95E5202F7074003FD564 /* DrawingControllerDelegate.swift */; };
 		1435BFA31F9B601600FB2768 /* RCTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435BFA21F9B601600FB2768 /* RCTextView.swift */; };
+		1495521721D0C0B10088E06B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520421D0C0B00088E06B /* ViewController.swift */; };
+		1495521921D0C0B10088E06B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520621D0C0B00088E06B /* ColorExtensions.swift */; };
+		1495521B21D0C0B10088E06B /* NextHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520921D0C0B00088E06B /* NextHomeViewController.swift */; };
+		1495521C21D0C0B10088E06B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520A21D0C0B00088E06B /* HomeViewController.swift */; };
+		1495521D21D0C0B10088E06B /* NextHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1495520B21D0C0B00088E06B /* NextHomeViewController.xib */; };
+		1495521E21D0C0B10088E06B /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520D21D0C0B00088E06B /* PersonalViewController.swift */; };
+		1495521F21D0C0B10088E06B /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495520F21D0C0B10088E06B /* ConnectionViewController.swift */; };
+		1495522021D0C0B10088E06B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495521121D0C0B10088E06B /* MainTabBarController.swift */; };
+		1495522121D0C0B10088E06B /* CYLPlusButtonSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495521221D0C0B10088E06B /* CYLPlusButtonSubclass.swift */; };
+		1495522221D0C0B10088E06B /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495521421D0C0B10088E06B /* PublishViewController.swift */; };
+		1495522321D0C0B10088E06B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495521621D0C0B10088E06B /* MessageViewController.swift */; };
 		1496A86C20FA4644005C2E14 /* NotificationsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A86720FA4643005C2E14 /* NotificationsCellProtocol.swift */; };
 		1496A86D20FA4644005C2E14 /* NotificationsChooseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A86820FA4643005C2E14 /* NotificationsChooseCell.swift */; };
 		1496A86E20FA4644005C2E14 /* NotificationsPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A86920FA4643005C2E14 /* NotificationsPreferencesViewController.swift */; };
@@ -951,6 +962,17 @@
 		140A95E3202F536D003FD564 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		140A95E5202F7074003FD564 /* DrawingControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingControllerDelegate.swift; sourceTree = "<group>"; };
 		1435BFA21F9B601600FB2768 /* RCTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTextView.swift; sourceTree = "<group>"; };
+		1495520421D0C0B00088E06B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1495520621D0C0B00088E06B /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		1495520921D0C0B00088E06B /* NextHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextHomeViewController.swift; sourceTree = "<group>"; };
+		1495520A21D0C0B00088E06B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1495520B21D0C0B00088E06B /* NextHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextHomeViewController.xib; sourceTree = "<group>"; };
+		1495520D21D0C0B00088E06B /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		1495520F21D0C0B10088E06B /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		1495521121D0C0B10088E06B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		1495521221D0C0B10088E06B /* CYLPlusButtonSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYLPlusButtonSubclass.swift; sourceTree = "<group>"; };
+		1495521421D0C0B10088E06B /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		1495521621D0C0B10088E06B /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		1496A86720FA4643005C2E14 /* NotificationsCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCellProtocol.swift; sourceTree = "<group>"; };
 		1496A86820FA4643005C2E14 /* NotificationsChooseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsChooseCell.swift; sourceTree = "<group>"; };
 		1496A86920FA4643005C2E14 /* NotificationsPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsPreferencesViewController.swift; sourceTree = "<group>"; };
@@ -1923,6 +1945,66 @@
 			path = Drawing;
 			sourceTree = "<group>";
 		};
+		1495520321D0C0B00088E06B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1495520421D0C0B00088E06B /* ViewController.swift */,
+				1495520621D0C0B00088E06B /* ColorExtensions.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1495520821D0C0B00088E06B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1495520921D0C0B00088E06B /* NextHomeViewController.swift */,
+				1495520A21D0C0B00088E06B /* HomeViewController.swift */,
+				1495520B21D0C0B00088E06B /* NextHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1495520C21D0C0B00088E06B /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				1495520D21D0C0B00088E06B /* PersonalViewController.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		1495520E21D0C0B10088E06B /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				1495520F21D0C0B10088E06B /* ConnectionViewController.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		1495521021D0C0B10088E06B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1495521121D0C0B10088E06B /* MainTabBarController.swift */,
+				1495521221D0C0B10088E06B /* CYLPlusButtonSubclass.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1495521321D0C0B10088E06B /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				1495521421D0C0B10088E06B /* PublishViewController.swift */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		1495521521D0C0B10088E06B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				1495521621D0C0B10088E06B /* MessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		1496A86620FA45CB005C2E14 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -2842,6 +2924,13 @@
 		41DF76E11D2C50710028DBF8 /* Rocket.Chat */ = {
 			isa = PBXGroup;
 			children = (
+				1495521321D0C0B10088E06B /* Publish */,
+				1495520E21D0C0B10088E06B /* Connection */,
+				1495520821D0C0B00088E06B /* Home */,
+				1495521021D0C0B10088E06B /* Main */,
+				1495521521D0C0B10088E06B /* Message */,
+				1495520321D0C0B00088E06B /* Other */,
+				1495520C21D0C0B00088E06B /* Personal */,
 				D1D535EA1F7081E6006625D2 /* API */,
 				4174CB0A1D2D990F0086DAC8 /* Controllers */,
 				4174CB1D1D2DB3270086DAC8 /* Extensions */,
@@ -4240,6 +4329,7 @@
 				14F8A25D202E64B200175FDC /* BnW-29@3x.png in Resources */,
 				411D40CD20D28150001A1035 /* ChannelInfoBasicCell.xib in Resources */,
 				33A5C9CC206A565800FE1C8F /* regional.json in Resources */,
+				1495521D21D0C0B10088E06B /* NextHomeViewController.xib in Resources */,
 				412EF3C62050507C001689A3 /* ReusableViewText.xib in Resources */,
 				998E649621619DF700E7C45A /* TextAttachmentCell.xib in Resources */,
 				14F8A224202E5CBF00175FDC /* Black-60@3x.png in Resources */,
@@ -4495,6 +4585,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/1PasswordExtension/OnePasswordExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
@@ -4522,6 +4613,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnePasswordExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
@@ -4592,6 +4684,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/1PasswordExtension/OnePasswordExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
@@ -4616,6 +4709,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnePasswordExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
@@ -4706,6 +4800,7 @@
 				8039442E20B342BB002F317A /* AddUsersViewController.swift in Sources */,
 				35C7D19A202B130400B4BE5A /* RCDateFormatter.swift in Sources */,
 				9987B5992093E526007D277C /* FileTableViewCell.swift in Sources */,
+				1495521E21D0C0B10088E06B /* PersonalViewController.swift in Sources */,
 				99BE4D8A2153162A001A43E2 /* UnmanagedMessage.swift in Sources */,
 				41FC9E0C209B3BAA00FED485 /* UploadMessageRequest.swift in Sources */,
 				800FCD501F728EC800D9A692 /* MemberCell.swift in Sources */,
@@ -4752,9 +4847,11 @@
 				4124D834209A0521005374CD /* ChatMessageDaySeparator.swift in Sources */,
 				4151B45A1E2D1DD400F8AA1B /* AttachmentModelMapping.swift in Sources */,
 				8039443220B3988F002F317A /* PagedResource.swift in Sources */,
+				1495522321D0C0B10088E06B /* MessageViewController.swift in Sources */,
 				80307E3E1FD75CB1006AD9EF /* VOLocalized.swift in Sources */,
 				807C7BF920740F3C006B600E /* AuthCanPinMessage.swift in Sources */,
 				996154B1205197E7009B9857 /* NewPasswordViewModel.swift in Sources */,
+				1495521B21D0C0B10088E06B /* NextHomeViewController.swift in Sources */,
 				80B2D99120E549CC002F4149 /* StoryboardInitializable.swift in Sources */,
 				411EDED51E3102CB00BC7BE3 /* UploadManager.swift in Sources */,
 				0BBCC2BF204532F0001E3B6D /* ChangeLanguageCell.swift in Sources */,
@@ -4793,6 +4890,7 @@
 				9938A08720D3141C00714AB4 /* CustomFieldTableViewCell.swift in Sources */,
 				41BAE3E71D71B26C00C2445A /* URLExtension.swift in Sources */,
 				991AB00821744E640097AE4C /* BaseAudioMessageCell.swift in Sources */,
+				1495521F21D0C0B10088E06B /* ConnectionViewController.swift in Sources */,
 				4174CB0D1D2D994A0086DAC8 /* ConnectServerViewController.swift in Sources */,
 				4199A9891DABCC570035F820 /* Emojione.swift in Sources */,
 				4116CBE720B599E6007E7163 /* StatusViewModel.swift in Sources */,
@@ -4825,6 +4923,7 @@
 				41D3668720C0323100970B99 /* SubscriptionsSortingView.swift in Sources */,
 				8062E32C20A1F8100044F407 /* RoomsRequest.swift in Sources */,
 				995F711E20C799E000B7535F /* EmailAuthTableViewCell.swift in Sources */,
+				1495521C21D0C0B10088E06B /* HomeViewController.swift in Sources */,
 				411498E31FC7A99C00D66542 /* ChatTitleViewModel.swift in Sources */,
 				80CC78D120DD7F99002FBEBC /* RealmAssorter.swift in Sources */,
 				80213C0E1FE0639E00809E14 /* HTTPMethod.swift in Sources */,
@@ -4833,6 +4932,7 @@
 				80CC8A1920ACE320009D64DF /* UserPermissions.swift in Sources */,
 				41F3C1001DB577ED000E0C76 /* MessageURL.swift in Sources */,
 				4174CB1C1D2DB2080086DAC8 /* LogManager.swift in Sources */,
+				1495522121D0C0B10088E06B /* CYLPlusButtonSubclass.swift in Sources */,
 				99D86ABA20D0C5240036C127 /* LoginTableViewControllerAuthenticationHandler.swift in Sources */,
 				8045F4AD20D313C100AA0F3C /* UITextFieldActivityIndicator.swift in Sources */,
 				412F8DD91F599EF100AF7786 /* DatabaseManager.swift in Sources */,
@@ -5017,6 +5117,7 @@
 				4162E1531D651A8800AAAE49 /* UserManager.swift in Sources */,
 				800FCD4C1F728EC800D9A692 /* ChannelInfoCellProtocol.swift in Sources */,
 				800E22841F8500A200DA84F1 /* MessagesListViewController.swift in Sources */,
+				1495521921D0C0B10088E06B /* ColorExtensions.swift in Sources */,
 				33D08E2720BD5EDC008D03EF /* NotThemeableViews.swift in Sources */,
 				41778EB920ED4C2C007F72F9 /* SubscriptionCellCondensed.swift in Sources */,
 				99805D7520C191BE00741B8E /* StyledTextField.swift in Sources */,
@@ -5033,11 +5134,13 @@
 				99B802ED20BC3BD400230109 /* ImageManager.swift in Sources */,
 				D1C536CE1F688B7100EBA8D9 /* UIFontExtensions.swift in Sources */,
 				80A2A2AB2073BD0800857DAF /* RealmCurrent.swift in Sources */,
+				1495522221D0C0B10088E06B /* PublishViewController.swift in Sources */,
 				80B2D99320E54AD4002F4149 /* UIViewControllerPushOrPresent.swift in Sources */,
 				33F67A40212BFC40004EB4A0 /* UnmanagedUser.swift in Sources */,
 				993B7B3E215F0A270067B962 /* FileCell.swift in Sources */,
 				8013F8761FD6B5E000EE1A4E /* VersionMiddleware.swift in Sources */,
 				80235D241F7466FF00A56CA5 /* LoaderTableViewCell.swift in Sources */,
+				1495522021D0C0B10088E06B /* MainTabBarController.swift in Sources */,
 				41FBF4E720BC320E0080D00D /* ServersListView.swift in Sources */,
 				334F78EC211DC639003D0C5A /* UnmanagedSubscription.swift in Sources */,
 				80054D001FDB1FA200F5ECF9 /* Alert.swift in Sources */,
@@ -5071,6 +5174,7 @@
 				80A2F39220057AD0005D2DCA /* EmojiAutocompleteCell.swift in Sources */,
 				80461ACF2191D24D003F1F32 /* TextHintLabelCell.swift in Sources */,
 				41DF76E31D2C50710028DBF8 /* AppDelegate.swift in Sources */,
+				1495521721D0C0B10088E06B /* ViewController.swift in Sources */,
 				D18675EC1F716A0D00406FB4 /* LoginRequest.swift in Sources */,
 				806728FF20079734009FE94D /* DeleteMessageRequest.swift in Sources */,
 				99DBB872208FF6FE00382DB2 /* SearchMessagesRequest.swift in Sources */,

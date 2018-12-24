@@ -9,11 +9,13 @@
 import UIKit
 import RealmSwift
 import UserNotifications
+import CYLTabBarController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var home: UIViewController?
     var notificationWindow: TransparentToTouchesWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -32,14 +34,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let auth = AuthManager.isAuthenticated() {
             AuthManager.persistAuthInformation(auth)
             AuthSettingsManager.shared.updateCachedSettings()
-            WindowManager.open(.subscriptions)
+//            WindowManager.open(.subscriptions)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Subscriptions", bundle:nil)
+            home = storyBoard.instantiateInitialViewController() as? UIViewController
         } else {
-            WindowManager.open(.auth(serverUrl: "", credentials: nil))
+          //  WindowManager.open(.auth(serverUrl: "", credentials: nil))
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
+            home = storyBoard.instantiateInitialViewController() as? UIViewController
         }
 
         initNotificationWindow()
+        
+        CYLPlusButtonSubclass.register()
+        
+        
+        let mainTabBarVc = MainTabBarController(viewControllers: self.viewControllers(), tabBarItemsAttributes: self.tabBarItemsAttributesForController())
+        
+        self.window = UIWindow()
+        self.window?.frame  = UIScreen.main.bounds
+        self.window?.rootViewController = mainTabBarVc
+        self.window?.makeKeyAndVisible()
+        
+        //tabbar背景色
+        UITabBar.appearance().backgroundColor = UIColor.white
+        //tabbar字体颜色
+        UITabBar.appearance().tintColor = UIColor.red
 
+      //  mainTabBarVc?.pushOrPresent(HomeViewController())
         return true
+    }
+    
+    
+    func viewControllers() -> [UIViewController]{
+       
+        let connection = UINavigationController(rootViewController: ConnectionViewController())
+        let message = UINavigationController(rootViewController: MessageViewController())
+        let personal =   UINavigationController(rootViewController: PersonalViewController())
+        let viewControllers = [home!, connection, message, personal]
+        
+        return viewControllers
+        
+    }
+    
+    func tabBarItemsAttributesForController() ->  [[String : String]] {
+        
+        let tabBarItemOne = [CYLTabBarItemTitle:"首页",
+                             CYLTabBarItemImage:"home_normal",
+                             CYLTabBarItemSelectedImage:"home_highlight"]
+        
+        let tabBarItemTwo = [CYLTabBarItemTitle:"同城",
+                             CYLTabBarItemImage:"mycity_normal",
+                             CYLTabBarItemSelectedImage:"mycity_highlight"]
+        
+        let tabBarItemThree = [CYLTabBarItemTitle:"消息",
+                               CYLTabBarItemImage:"message_normal",
+                               CYLTabBarItemSelectedImage:"message_highlight"]
+        
+        let tabBarItemFour = [CYLTabBarItemTitle:"我的",
+                              CYLTabBarItemImage:"account_normal",
+                              CYLTabBarItemSelectedImage:"account_highlight"]
+        let tabBarItemsAttributes = [tabBarItemOne,tabBarItemTwo,tabBarItemThree,tabBarItemFour]
+        return tabBarItemsAttributes
     }
 
     func initNotificationWindow() {

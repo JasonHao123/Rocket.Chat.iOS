@@ -2,6 +2,7 @@ PODS:
   - 1PasswordExtension (1.8.5)
   - Crashlytics (3.11.1):
     - Fabric (~> 1.8.1)
+  - CYLTabBarController (1.17.22)
   - DifferenceKit (0.7.2):
     - DifferenceKit/Core (= 0.7.2)
     - DifferenceKit/UIKitExtension (= 0.7.2)
@@ -91,6 +92,7 @@ PODS:
 DEPENDENCIES:
   - 1PasswordExtension
   - Crashlytics
+  - CYLTabBarController (~> 1.17.6)
   - DifferenceKit/Core
   - Fabric
   - Firebase/Core
@@ -115,6 +117,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - 1PasswordExtension
     - Crashlytics
+    - CYLTabBarController
     - DifferenceKit
     - Fabric
     - Firebase
@@ -166,6 +169,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   1PasswordExtension: 0e95bdea64ec8ff2f4f693be5467a09fac42a83d
   Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   DifferenceKit: 5179eaf0e76a1b9fbaeb93f4c1a82510be63ca65
   Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   Firebase: 9190018e296139d938b99521cde0c15a6e8d2946
@@ -194,6 +198,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
-PODFILE CHECKSUM: 5d62982fe6d8cd234f28edafc23b27595439d854
+PODFILE CHECKSUM: 91ae95133cd9423f320cb2b0645082639f54fe08
 
 COCOAPODS: 1.5.3
