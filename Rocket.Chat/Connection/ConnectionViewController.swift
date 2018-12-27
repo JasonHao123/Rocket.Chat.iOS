@@ -7,30 +7,51 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ConnectionViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.blue
-
+class ConnectionViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+    
+    private weak var calendar: FSCalendar!
+    
+    override func loadView() {
+        
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = UIColor.groupTableViewBackground
+        self.view = view
+        
+        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 300
+        let calendar = FSCalendar(frame: CGRect(x: 0, y: self.navigationController!.navigationBar.frame.maxY, width: self.view.bounds.width, height: height))
+        calendar.dataSource = self
+        calendar.delegate = self
+        calendar.scope = .month
+        calendar.backgroundColor = UIColor.white
+        self.view.addSubview(calendar)
+        self.calendar = calendar
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func willAnimateRotation(to: UIInterfaceOrientation, duration: TimeInterval) {
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didRotate(from: UIInterfaceOrientation) {
+        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 300
+        var width = self.view.bounds.width
+        if from.isPortrait {
+           width /= 2
+        }
+        calendar.frame = CGRect(x:0, y:self.navigationController!.navigationBar.frame.maxY, width:width, height:height)
+        calendar.reloadData()
+        calendar.setCurrentPage(Date(), animated: false )
     }
-    */
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "日程"
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        if monthPosition == .previous || monthPosition == .next {
+            calendar.setCurrentPage(date, animated: true)
+        }
+    }
+    
 }

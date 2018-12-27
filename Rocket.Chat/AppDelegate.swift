@@ -37,30 +37,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            WindowManager.open(.subscriptions)
             let storyBoard : UIStoryboard = UIStoryboard(name: "Subscriptions", bundle:nil)
             home = storyBoard.instantiateInitialViewController() as? UIViewController
+            
+            
+            
+            let mainTabBarVc = MainTabBarController(viewControllers: self.viewControllers(), tabBarItemsAttributes: self.tabBarItemsAttributesForController())
+            
+            self.window = UIWindow()
+            self.window?.frame  = UIScreen.main.bounds
+            self.window?.rootViewController = mainTabBarVc
+            self.window?.makeKeyAndVisible()
+            
+            //tabbar背景色
+            UITabBar.appearance().backgroundColor = UIColor.white
+            //tabbar字体颜色
+            UITabBar.appearance().tintColor = UIColor.red
         } else {
-          //  WindowManager.open(.auth(serverUrl: "", credentials: nil))
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
-            home = storyBoard.instantiateInitialViewController() as? UIViewController
+            WindowManager.open(.auth(serverUrl: "", credentials: nil))
+//            let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
+//            home = storyBoard.instantiateInitialViewController() as? UIViewController
         }
 
         initNotificationWindow()
         
-        CYLPlusButtonSubclass.register()
-        
-        
-        let mainTabBarVc = MainTabBarController(viewControllers: self.viewControllers(), tabBarItemsAttributes: self.tabBarItemsAttributesForController())
-        
-        self.window = UIWindow()
-        self.window?.frame  = UIScreen.main.bounds
-        self.window?.rootViewController = mainTabBarVc
-        self.window?.makeKeyAndVisible()
-        
-        //tabbar背景色
-        UITabBar.appearance().backgroundColor = UIColor.white
-        //tabbar字体颜色
-        UITabBar.appearance().tintColor = UIColor.red
 
-      //  mainTabBarVc?.pushOrPresent(HomeViewController())
         return true
     }
     
@@ -70,7 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let connection = UINavigationController(rootViewController: ConnectionViewController())
         let message = UINavigationController(rootViewController: MessageViewController())
         let personal =   UINavigationController(rootViewController: PersonalViewController())
-        let viewControllers = [home!, connection, message, personal]
+        let contact = UINavigationController(rootViewController: HomeViewController())
+        let viewControllers = [home!, connection, message,contact, personal]
         
         return viewControllers
         
@@ -78,22 +78,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func tabBarItemsAttributesForController() ->  [[String : String]] {
         
-        let tabBarItemOne = [CYLTabBarItemTitle:"首页",
+        let tabBarItemOne = [CYLTabBarItemTitle:"会话",
                              CYLTabBarItemImage:"home_normal",
                              CYLTabBarItemSelectedImage:"home_highlight"]
         
-        let tabBarItemTwo = [CYLTabBarItemTitle:"同城",
+        let tabBarItemTwo = [CYLTabBarItemTitle:"日程",
                              CYLTabBarItemImage:"mycity_normal",
                              CYLTabBarItemSelectedImage:"mycity_highlight"]
         
-        let tabBarItemThree = [CYLTabBarItemTitle:"消息",
+        let tabBarItemThree = [CYLTabBarItemTitle:"工作台",
                                CYLTabBarItemImage:"message_normal",
                                CYLTabBarItemSelectedImage:"message_highlight"]
         
-        let tabBarItemFour = [CYLTabBarItemTitle:"我的",
+        let tabBarItemFour = [CYLTabBarItemTitle:"通讯录",
                               CYLTabBarItemImage:"account_normal",
                               CYLTabBarItemSelectedImage:"account_highlight"]
-        let tabBarItemsAttributes = [tabBarItemOne,tabBarItemTwo,tabBarItemThree,tabBarItemFour]
+        let tabBarItemFive = [CYLTabBarItemTitle:"我的",
+                              CYLTabBarItemImage:"account_normal",
+                              CYLTabBarItemSelectedImage:"account_highlight"]
+        let tabBarItemsAttributes = [tabBarItemOne,tabBarItemTwo,tabBarItemThree,tabBarItemFour,tabBarItemFive]
         return tabBarItemsAttributes
     }
 
